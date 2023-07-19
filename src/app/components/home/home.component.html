@@ -1,0 +1,24 @@
+<section class="info">
+    <h1 style="padding-bottom: 20px;">Transporte <small>FBI </small></h1>
+    <select #filtro class="form-select" aria-label="Default select example">
+  <option selected>Seleccione</option>
+  <option >Todos</option>
+  <option value="2">Interno</option>
+  <option value="3">Externo</option>
+</select>
+    <div class="col animated fadeIn fast" *ngFor="let Rutas of ruta; let i=index;">
+        <div class="card mb-3" style="max-width: 350px;">
+            <div class="row g-0">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Origen: {{Rutas.origen}}</h5>
+                        <p class="card-text" style="text-align: justify;">Destino: {{Rutas.destino}}</p>
+                        <p class="card-text" style="text-align: justify;">{{Rutas.descripcion}}</p>
+                        <p class="card-text"><small class="text-body-secondary">Precio: {{Rutas.precio}}$ <br>Tipo: {{Rutas.tipo}}</small></p>
+                        <button (click)="verRutas(i)" type="button" class="btn btn-primary" style="padding-left: 15px; padding-right: 15px;"> Ver Mas </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
